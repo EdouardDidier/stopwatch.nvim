@@ -15,6 +15,7 @@ local commands = {
 vim.api.nvim_create_user_command("Stopwatch", function(opts)
 	local sub = opts.fargs[1]
 	local handler = commands[sub]
+
 	if handler then
 		handler()
 	else
