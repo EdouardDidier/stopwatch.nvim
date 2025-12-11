@@ -49,7 +49,7 @@ end
 
 M.close = function()
 	if is_toggled then
-		if win then
+		if win and vim.api.nvim_win_is_valid(win) then
 			vim.api.nvim_win_close(win, false)
 			win = nil
 		end
